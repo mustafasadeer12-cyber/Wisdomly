@@ -1,13 +1,14 @@
 h1 {
     margin: 2rem;
+    font-size: 50px;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 body {
@@ -15,6 +16,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    height: 100vh;
+}
 
+p {
+    font-size: 11px
+}
+
+
+
+button {
+    padding: 0.3rem 1rem;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }

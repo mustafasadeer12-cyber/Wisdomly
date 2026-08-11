@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import './Wisdomly.css'
 const RANDOM_URL = "https://inspo-quotes-api.herokuapp.com/quotes/random"
 export default function Wisdomly() {
-    const [qoute, setQoute] = useState ({author: "",text: ""})
+    const [quote, setQuote] = useState ({author: "",text: ""})
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         fetchQuote()
@@ -14,7 +14,7 @@ export default function Wisdomly() {
         const jsonResponse = await response.json()
         const randomQuote = jsonResponse.quote
         console.log(randomQuote)
-        setQoute(randomQuote)
+        setQuote(randomQuote)
         setIsLoading(false)
     }
     
@@ -23,8 +23,8 @@ export default function Wisdomly() {
         <main className='Wisdomly'>
             <h1>Wisdomly</h1>
             {isLoading && <p>Loading..⌛︎</p>}
-            <h2>{qoute.text}</h2>
-            <h3>-{qoute.author}</h3>
+            <h2>{quote.text}</h2>
+            <h3>-{quote.author}</h3>
             <button onClick={fetchQuote}>Get</button>
         </main>
     )
